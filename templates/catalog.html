@@ -12,9 +12,9 @@
     {% for item in catalog %}
         <a href="{{ item.name }}">
             <div class="catalog_item">
-                <h2 class="item_name">{{ item.name }}</h2>
-                <div class="item_price">{{ item.price }}</div>
-                <div class="item_color">{{ item.color }}</div>
+                <h2 class="item_name">Наименование: {{ item.name }}</h2>
+                <div class="item_price">Цена: {{ item.price }}</div>
+                <div class="item_color">Цвет: {{ item.color }}</div>
             </div>
         </a>
     {% endfor %}

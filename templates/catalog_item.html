@@ -6,14 +6,14 @@
 
 {% block content %}
 <h1 class="page_name">
-    {{ catalog_item.name }}:
+    {{ my_catalog_item.name }}:
 </h1>
 <div class="main_text">
-    <div class="catalog_item">
-        <h2 class="item_name">Наименование: {{ catalog_item.name }}</h2>
-        <div class="item_price">Цена: {{ catalog_item.price }}</div>
-        <div class="item_color">Цвет: {{ catalog_item.color }}</div>
-        <button>Купить</button>
+    <div class="catalog_item item">
+        <h2 class="item_name">Наименование: {{ my_catalog_item.name }}</h2>
+        <div class="item_price">Цена: {{ my_catalog_item.price }}</div>
+        <div class="item_color">Цвет: {{ my_catalog_item.color }}</div>
+        <input type="button" class="pay_button" onClick="showMessage()" value="Купить" />
     </div>
 </div>
 {% endblock %}
