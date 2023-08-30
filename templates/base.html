@@ -1,10 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,
-initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <title>
         {% block title %}
         Мой сайт
@@ -12,21 +12,33 @@ initial-scale=1, shrink-to-fit=no">
     </title>
 </head>
 <body>
-<div class="container-fluid">
-    <ul class="nav nav-pills justify-content-end align-items-end">
-        <li class="nav-item"><a href="/about/"
-                                class="nav-link">O нас</a></li>
-        <li class="nav-item"><a href="/contact/"
-                                class="nav-link">Контакты</a></li>
-    </ul>
-    {% block content %}
-    Страница не заполнена
-    {% endblock %}
-    <div class="row fixed-bottom modal-footer">
-        <hr>
-        <p>Все права защищены &copy;</p>
-    </div>
-</div>
-<script src="/static/js/bootstrap.bundle.min.js"></script>
+    <header>
+        <nav>
+            <div class="container center">
+                <div class="v_center header1">
+                    Магазин одежды
+                </div>
+                <div class="v_center main_menu">
+                    <a href="/" class="menu_item">Главная</a>
+                    <a href="/catalog/" class="menu_item">Каталог</a>
+                    <a href="/about/" class="menu_item">О нас</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container center">
+            {% block content %}
+            Страница не заполнена
+            {% endblock %}
+        </div>
+    </main>
+    <footer>
+        <div class="container center">
+            <div class="v_center    footer1">
+                Все права защищены &copy;
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

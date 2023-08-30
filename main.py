@@ -1,16 +1,25 @@
-# This is a sample Python script.
+import os
+import sys
+from flask import Flask, render_template, send_from_directory
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+app = Flask(__name__)
 
 
-# Press the green button in the gutter to run the script.
+@app.route('/')
+def base():
+    return render_template('index.html')
+
+@app.route('/about/')
+def about():
+    return render_template('about.html')
+
+@app.route('/catalog/')
+def catalog():
+    return render_template('catalog.html')
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    app.run(debug=True)
